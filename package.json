@@ -1,0 +1,22 @@
+{
+  "name": "ip-to-tz",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "_build": "npm run update-geo",
+    "start": "micro",
+    "update-geo": "curl http://geolite.maxmind.com/download/geoip/database/GeoLite2-City.mmdb.gz -s -o - | gunzip > ./data/GeoLite2-City.mmdb"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "geo-tz": "^5.0.0",
+    "maxmind": "^2.11.0",
+    "micro": "^9.3.3",
+    "micro-cors": "^0.1.1",
+    "micro-query": "^0.3.0",
+    "server-timings": "^2.0.1"
+  }
+}

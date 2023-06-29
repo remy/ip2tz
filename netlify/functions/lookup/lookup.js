@@ -3,12 +3,10 @@ const geoLookup = require('maxmind');
 
 async function open() {
   return new Promise((resolve, reject) => {
-    geoLookup.open(
-      __dirname + '/../../../data/GeoLite2-City.mmdb',
-      (err, lookup) => {
-        resolve(lookup);
-      }
-    );
+    geoLookup.open('./data/GeoLite2-City.mmdb', (err, lookup) => {
+      if (err) reject(err);
+      else resolve(lookup);
+    });
   });
 }
 

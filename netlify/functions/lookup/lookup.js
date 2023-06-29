@@ -1,10 +1,15 @@
 /* eslint-env node */
 const geoLookup = require('maxmind');
+const fs = require('fs');
 
 async function open() {
   return new Promise((resolve, reject) => {
     geoLookup.open('./data/GeoLite2-City.mmdb', (err, lookup) => {
-      console.log({ cwd: process.cwd(), dir: __dirname });
+      console.log({
+        cwd: process.cwd(),
+        dir: __dirname,
+        list: JSON.stringify(fs.readdirSync(process.cwd())),
+      });
 
       if (err) reject(err);
       else resolve(lookup);

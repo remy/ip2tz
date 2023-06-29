@@ -4,6 +4,8 @@ const geoLookup = require('maxmind');
 async function open() {
   return new Promise((resolve, reject) => {
     geoLookup.open('./data/GeoLite2-City.mmdb', (err, lookup) => {
+      console.log({ cwd: process.cwd(), dir: __dirname });
+
       if (err) reject(err);
       else resolve(lookup);
     });

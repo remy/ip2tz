@@ -4,7 +4,7 @@ const fs = require('fs');
 
 async function open() {
   return new Promise((resolve, reject) => {
-    geoLookup.open('./data/GeoLite2-City.mmdb', (err, lookup) => {
+    geoLookup.open(__dirname + '/GeoLite2-City.mmdb', (err, lookup) => {
       console.log({
         cwd: process.cwd(),
         dir: __dirname,

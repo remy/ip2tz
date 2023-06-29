@@ -12,11 +12,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "geo-tz": "^5.0.0",
-    "maxmind": "^2.11.0",
-    "micro": "^9.3.3",
-    "micro-cors": "^0.1.1",
-    "micro-query": "^0.3.0",
-    "server-timings": "^2.0.1"
+    "maxmind": "^2.11.0"
   }
 }
